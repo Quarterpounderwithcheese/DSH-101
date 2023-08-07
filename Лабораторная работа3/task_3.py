@@ -1,5 +1,6 @@
 # TODO  Напишите функцию count_letters
 def count_letters(text):
+    text = text.lower()
     letter_count = {}
     total_letters = 0
     for symbol in text:
@@ -56,9 +57,8 @@ main_str = """
 """
 
 # TODO Распечатайте в столбик букву и её частоту в тексте
-lowercase_main_str = main_str.lower()
 
-letter_count = count_letters(lowercase_main_str)
+letter_count = count_letters(main_str)
 letter_frequency = calculate_frequency(letter_count)
 
 for letter, frequency in letter_frequency.items():
