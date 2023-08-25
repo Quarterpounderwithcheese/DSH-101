@@ -6,7 +6,7 @@ increase = 0.03  # Ежемесячный рост цен
 # TODO Рассчитайте подушку безопасности, чтобы протянуть 10 месяцев без долгов
 money_capital = 0
 for _ in range(months):
-    money_capital += max(spend - salary, 0)
+    money_capital += spend - salary
     spend += spend * increase
 money_capital = round(money_capital)
 
